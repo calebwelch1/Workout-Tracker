@@ -2,11 +2,6 @@
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
-//Add exercises to a previous workout plan.
-
-// - Add new exercises to a new workout plan.
-
-// - View multiple the combined weight of multiple exercises on the `stats` page.
 
 const workoutSchema = new Schema({
   name: {
@@ -23,6 +18,7 @@ const workoutSchema = new Schema({
     default: Date.now,
   },
 });
+// - View multiple the combined weight of multiple exercises on the `stats` page.
 
 const Workout = mongoose.model("Workout", workoutSchema);
 

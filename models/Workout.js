@@ -1,21 +1,30 @@
 // here we make the schema for mongoose connection and export it
 const mongoose = require("mongoose");
+const { isNumber } = require("util");
 
 const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({
-  name: {
+  exerciseType: {
     type: String,
     trim: true,
-    required: "Enter a name for the workout",
   },
-  time: {
+  exerciseName: {
+    type: String,
+    trim: true,
+  },
+  weight: {
     type: Number,
-    required: "Enter an a time value",
   },
-  date: {
-    type: Date,
-    default: Date.now,
+  sets: {
+    type: Number,
+  },
+  reps: {
+    type: Number,
+  },
+  duration: {
+    type: Number,
+    trim: true,
   },
 });
 // - View multiple the combined weight of multiple exercises on the `stats` page.

@@ -9,7 +9,10 @@ router.get("/stats", (req, res) => {
 router.get("/exercise", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/exercise.html"));
 });
-
+//send html requests for /exercise ? to exercise.html
+router.get("/exercise?", (req, res) => {
+  res.sendFile(path.join__dirname, "../public/exercise.html");
+});
 //send html requests for / to index
 router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
